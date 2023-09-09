@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+
+<h1><%= title %></h1>
+<h4>By <%= author %></h4>
+<h6><%= date %></h6>
+<div class="content-div">
+  <% let words = content.split(' '); %>
+  <p class="para">
+    <% for (let i = 0; i < words.length; i++) { %>
+      <%= words[i] %> 
+      <% if (i === 200) { %>
+        </p>
+        <div class="imagediv">
+          <% images.forEach(function (image) { %>
+            <img src="/uploads/<%= image %>" alt="Image">
+          <% }) %>
+        </div>
+        <p class="para">
+      <% } %>
+    <% } %>
+  </p>
+</div>
+
+<%- include("partials/footer"); -%>
