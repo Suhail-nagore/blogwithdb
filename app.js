@@ -42,7 +42,7 @@ const upload = multer({ storage: storage });
 
 
 mongoose.connect(
-  "mongodb+srv://suhailnagore4:wBZJWpeIJ1zNVtho@cluster0.6po2xot.mongodb.net/?retryWrites=true&w=majority",
+  "YOUR_MONGO_DB_DATABASE_URL_HERE",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
